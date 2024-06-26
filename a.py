@@ -8,3 +8,5 @@ response = client.chat.completions.create(
     messages=[{"role": "user", "content": "Tell me fun things to do in Hong Kong"}],
 )
 print(response.choices[0].message.content)
+
+#TEST
