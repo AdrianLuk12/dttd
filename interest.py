@@ -52,14 +52,6 @@ result.columns = ['persona_id', 'interests']
 # Write the result to a new CSV file
 result.to_csv('interest-output.csv', index=False)
 
-print("Processing complete. Results written to output.csv")
+print(result.head())
 
-"""
-# head of df after processing
-print(df1.head())
-
-# output file to new csv
-grouped.to_csv(output_file_path, index=False)
-
-print("Finished analyzing opinions of user interactions.")
-"""
+print("processed user interests")
