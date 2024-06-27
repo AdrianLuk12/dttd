@@ -8,7 +8,8 @@ from datetime import datetime, timezone
 client = Together(api_key="2e0923315d6b076dade12be49f205ea73836ddee710bcc30365204e4f452c655")
 
 # load file
-input_file_path = './Would-You-Rather_v2__1718936223855.csv'
+#input_file_path = './Would-You-Rather_v2__1718936223855.csv'
+input_file_path = './wyr-questions.csv'
 output_file_path = './wyr-output.csv'
 separated_output_file_path = './wyr-output-separated.csv'
 df = pd.read_csv(input_file_path, encoding='utf-8')
@@ -67,12 +68,14 @@ for index, row in df.iterrows():
     #assign tag
     df.at[index, 'Tags'] = filtered_string
 
+    df.to_csv(output_file_path, index=False)
+
 
 # head of df after processing
 print(df.head())
 
 # output file to new csv
-df.to_csv(output_file_path, index=False)
+#df.to_csv(output_file_path, index=False)
 
 print("Finished categorizing topics for WYR questions.")
 
