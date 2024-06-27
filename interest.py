@@ -16,7 +16,7 @@ df2 = pd.read_csv(questions_path, encoding='utf-8')
 
 ######## TAGGING
 # create column Tag
-df1['Interest'] = ''
+df1['interests'] = ''
 
 for index, row in df1.iterrows():
     post_id = row['post_id']
@@ -34,17 +34,32 @@ for index, row in df1.iterrows():
         print(f"No questions found for post_id '{post_id}'")
         tag = ""
     else:
-        tag = filtered_dataframe.iloc[0]['Tags']
+        tag = filtered_dataframe.iloc[0]['Tags'] + ", "
 
     print(str(index+1) + " - Interest added: " + tag)
     #assign tag
-    df1.at[index, 'Interest'] = tag
+    df1.at[index, 'interests'] = tag
 
+# Group by persona_id, combine interests, remove duplicates, and sort
+result = df1.groupby('persona_id')['interests'].apply(lambda x: ', '.join(sorted(set(interest.strip() for row in x for interest in row.split(',')))))
 
+# Reset index to make persona_id a column again
+result = result.reset_index()
+
+# Rename the column to 'Interests'
+result.columns = ['persona_id', 'interests']
+
+# Write the result to a new CSV file
+result.to_csv('interest-output.csv', index=False)
+
+print("Processing complete. Results written to output.csv")
+
+"""
 # head of df after processing
 print(df1.head())
 
 # output file to new csv
-#df1.to_csv(output_file_path, index=False)
+grouped.to_csv(output_file_path, index=False)
 
 print("Finished analyzing opinions of user interactions.")
+"""
