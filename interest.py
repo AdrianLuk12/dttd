@@ -74,9 +74,6 @@ for i, row in df1.iterrows():
 # Group by persona_id and sum the Interests arrays
 result = df1.groupby('persona_id')['interests'].apply(lambda x: [round(sum(i),2) for i in zip(*x)])
 
-# Convert the result back to a string representation
-result = result.apply(str)
-
 # Reset the index to make persona_id a column again
 result = result.reset_index()
 
