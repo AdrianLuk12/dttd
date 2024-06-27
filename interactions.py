@@ -6,9 +6,6 @@ print("started per interaction analysis")
 file_path = 'wyr-entry.csv'
 df = pd.read_csv(file_path)
 
-# Convert action_time to datetime format
-df['action_time'] = pd.to_datetime(df['action_time'])
-
 # Group by persona_id and compute metrics
 user_behavior = df.groupby('persona_id').agg(
     num_posts_viewed=('viewed', 'sum'),
@@ -19,7 +16,7 @@ user_behavior = df.groupby('persona_id').agg(
 ).reset_index()
 
 # Optional: Save the user behavior analysis to a CSV file
-output_path = 'user_interaction_sum.csv'
+output_path = './retention/user_interaction_sum.csv'
 user_behavior.to_csv(output_path, index=False)
 
 print("User behavior analysis has been saved to", output_path)
