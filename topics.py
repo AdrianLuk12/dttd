@@ -3,7 +3,7 @@ import csv
 import os
 import math
 from together import Together
-from datetime import datetime, timezone
+from datetime import datetime
 
 client = Together(api_key="2e0923315d6b076dade12be49f205ea73836ddee710bcc30365204e4f452c655")
 

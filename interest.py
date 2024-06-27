@@ -1,11 +1,12 @@
 import pandas as pd
-import csv
-import os
-import math
-from together import Together
-from datetime import datetime, timezone
+import ast
 
-client = Together(api_key="2e0923315d6b076dade12be49f205ea73836ddee710bcc30365204e4f452c655")
+views_weight = 0.2
+responses_weight = 0.4
+likes_weight = 0.5
+comments_weight = 1
+bookmarks_weight = 0.6
+skips_weight = 0.4
 
 # load file
 entry_path = './wyr-entry.csv'
@@ -18,13 +19,23 @@ df2 = pd.read_csv(questions_path, encoding='utf-8')
 # create column Tag
 df1['interests'] = ''
 
-for index, row in df1.iterrows():
+tags = [
+    "Anime","Art","Business and Finance","Celebs","Cryptocurrency","Current Events","Dating","Ethics","Family","Fashion",
+    "Fitness","Food and dining experiences","Friendship","Gaming","Global Politics","Horoscope","Hypothetical","Kpop", "LGBTQ+",
+    "Life choices","Mental health","Movies","Music","Nature","New gadgets","News","Painting","Personal Experiences",
+    "Personal finance tips","Social justice","Software updates","Sports","Stock market updates","TV shows","Travel",
+    "US Politics","Writing"
+]
+
+for i, row in df1.iterrows():
     post_id = row['post_id']
     viewed = row['viewed']
     voted = row['voted']
     liked = row['liked']
     commented = row['commented']
     skipped = row['skipped']
+
+    interests = [0] * 37
     
     # Filter DataFrame based on post_id
     filtered_dataframe = df2[df2['post_id'] == post_id]
@@ -32,22 +43,42 @@ for index, row in df1.iterrows():
     # Check if post_id exists
     if len(filtered_dataframe) == 0:
         print(f"No questions found for post_id '{post_id}'")
-        tag = ""
+        tag_string = ""
     else:
-        tag = filtered_dataframe.iloc[0]['Tags'] + ", "
+        tag_string = filtered_dataframe.iloc[0]['Tags'] + ", "
 
-    print(str(index+1) + " - Interest added: " + tag)
+    input_tags = [tag.strip() for tag in tag_string.split(',') if tag.strip()]
+
+    for tag in input_tags:
+        try:
+            index = tags.index(tag)
+            if viewed > 0:
+                interests[index] += views_weight
+            elif voted > 0:
+                interests[index] += responses_weight
+            elif liked > 0:
+                interests[index] += likes_weight
+            elif commented > 0:
+                interests[index] += comments_weight
+            elif skipped > 0:
+                interests[index] -= skips_weight
+        except ValueError:
+            print(f"'{tag}' not found in the list")    
+
+    print(str(i+1) + " - processing interaction")
     #assign tag
-    df1.at[index, 'interests'] = tag
+    df1.at[i, 'interests'] = interests
 
-# Group by persona_id, combine interests, remove duplicates, and sort
-result = df1.groupby('persona_id')['interests'].apply(lambda x: ', '.join(sorted(set(interest.strip() for row in x for interest in row.split(',')))))
+#df1['interests'] = df1['interests'].apply(ast.literal_eval)
 
-# Reset index to make persona_id a column again
+# Group by persona_id and sum the Interests arrays
+result = df1.groupby('persona_id')['interests'].apply(lambda x: [round(sum(i),2) for i in zip(*x)])
+
+# Convert the result back to a string representation
+result = result.apply(str)
+
+# Reset the index to make persona_id a column again
 result = result.reset_index()
-
-# Rename the column to 'Interests'
-result.columns = ['persona_id', 'interests']
 
 # Write the result to a new CSV file
 result.to_csv('interest-output.csv', index=False)

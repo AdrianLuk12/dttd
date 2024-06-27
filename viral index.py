@@ -1,6 +1,6 @@
 import pandas as pd
 import math
-from datetime import datetime, timezone
+from datetime import datetime
 
 # weights
 today_weight = 0.6
