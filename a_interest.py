@@ -1,7 +1,7 @@
 import pandas as pd
 import ast
 
-views_weight = 0.2
+views_weight = 0.1
 responses_weight = 0.4
 likes_weight = 0.5
 comments_weight = 1
@@ -11,7 +11,7 @@ skips_weight = 0.4
 # load file
 entry_path = './wyr-entry.csv'
 questions_path = './stat-output.csv'
-output_file_path = './opinion-output.csv'
+output_file_path = './interest-output.csv'
 df1 = pd.read_csv(entry_path, encoding='utf-8')
 df2 = pd.read_csv(questions_path, encoding='utf-8')
 
@@ -91,10 +91,26 @@ result_input_path = 'interest-output.csv'
 final_output_path = "interest-viral-index-output.csv"
 df = pd.read_csv(result_input_path, encoding='utf-8')
 
-for i in range(len(tags)):
-    for k, rows in df.iterrows():
-        values = rows['interests']
-        t = ast.literal_eval(values)
-        df[tags[i]] = t[i]
+# Create a list to hold the transformed data
+rows_list = []
 
-df.to_csv(final_output_path, encoding='utf-8', index=False)
+# Process each row in the input DataFrame
+for index, row in df.iterrows():
+    # Convert the interests string to a list
+    interests = ast.literal_eval(row['interests'])
+    
+    # Create a new row dictionary
+    new_row = {'persona_id': row['persona_id'], 'interests': row['interests']}
+    
+    # Populate the dictionary with interest values for each tag
+    for i, tag in enumerate(tags):
+        new_row[tag] = interests[i]
+    
+    # Append the new row to the list
+    rows_list.append(new_row)
+
+# Create a new DataFrame from the list of rows
+output_df = pd.DataFrame(rows_list)
+
+# Write the output DataFrame to a new CSV file
+output_df.to_csv(final_output_path, encoding='utf-8', index=False)

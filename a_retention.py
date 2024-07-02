@@ -1,11 +1,11 @@
 import pandas as pd
 
-views_weight = 0.2
+views_weight = 0.1
 responses_weight = 0.4
 likes_weight = 0.5
 comments_weight = 1
 bookmarks_weight = 0.6
-skips_weight = 0.3
+skips_weight = 0.4
 
 print("Starting user activity analysis")
 

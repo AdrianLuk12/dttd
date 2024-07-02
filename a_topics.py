@@ -5,7 +5,19 @@ import math
 from together import Together
 from datetime import datetime
 
-client = Together(api_key="2e0923315d6b076dade12be49f205ea73836ddee710bcc30365204e4f452c655")
+# weights
+today_weight = 0.6
+views_weight = 0.2
+responses_weight = 0.4
+likes_weight = 0.5
+comments_weight = 1
+bookmarks_weight = 0.6
+skips_weight = 0.3
+
+polarization_weight = 0.25
+engagement_weight = 0.75
+
+client = Together(api_key="8d95a9a2f429b79f8c2464de290193b505d5b551b38c87294c45ffa3c5d50099")
 
 # load file
 #input_file_path = './Would-You-Rather_v2__1718936223855.csv'
@@ -14,11 +26,7 @@ output_file_path = './wyr-output.csv'
 separated_output_file_path = './wyr-output-separated.csv'
 df = pd.read_csv(input_file_path, encoding='utf-8')
 
-
-
 ######## TAGGING
-
-
 # create column Tag
 df['Tags'] = ''
 
@@ -104,19 +112,6 @@ print("Tags have been processed to be separated.")
 
 
 ######## CALCULATING STATS
-
-
-# weights
-today_weight = 0.6
-views_weight = 0.2
-responses_weight = 0.4
-likes_weight = 0.5
-comments_weight = 1
-bookmarks_weight = 0.6
-skips_weight = 0.3
-
-polarization_weight = 0.25
-engagement_weight = 0.75
 
 # Input and output file names
 input_file = './wyr-output.csv'
