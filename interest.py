@@ -27,6 +27,8 @@ tags = [
     "US Politics","Writing"
 ]
 
+"""
+
 for i, row in df1.iterrows():
     post_id = row['post_id']
     viewed = row['viewed']
@@ -83,3 +85,16 @@ result.to_csv('interest-output.csv', index=False)
 print(result.head())
 
 print("processed user interests")
+
+"""
+result_input_path = 'interest-output.csv'
+final_output_path = "interest-viral-index-output.csv"
+df = pd.read_csv(result_input_path, encoding='utf-8')
+
+for i in range(len(tags)):
+    for k, rows in df.iterrows():
+        values = rows['interests']
+        t = ast.literal_eval(values)
+        df[tags[i]] = t[i]
+
+df.to_csv(final_output_path, encoding='utf-8', index=False)
