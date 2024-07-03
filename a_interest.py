@@ -1,7 +1,8 @@
 import pandas as pd
 import ast
-from datetime import datetime
+import os
 import math
+from datetime import datetime
 
 today_weight = 0.6
 views_weight = 0.1
@@ -123,7 +124,9 @@ for index, row in df.iterrows():
 # Create a new DataFrame from the list of rows
 output_df = pd.DataFrame(rows_list)
 
-print("finished spliiting interests into fields")
-
 # Write the output DataFrame to a new CSV file
 output_df.to_csv(final_output_path, encoding='utf-8', index=False)
+
+os.remove(result_input_path)
+
+print("finished spliiting interests into fields")
