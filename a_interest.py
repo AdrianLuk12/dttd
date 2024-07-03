@@ -1,6 +1,9 @@
 import pandas as pd
 import ast
+from datetime import datetime
+import math
 
+today_weight = 0.6
 views_weight = 0.1
 responses_weight = 0.4
 likes_weight = 0.5
@@ -11,12 +14,13 @@ skips_weight = 0.4
 # load file
 entry_path = './wyr-entry.csv'
 questions_path = './stat-output.csv'
+
 output_file_path = './interest-output.csv'
+final_output_path = "interest-viral-index-output.csv"
 df1 = pd.read_csv(entry_path, encoding='utf-8')
 df2 = pd.read_csv(questions_path, encoding='utf-8')
 
-######## TAGGING
-# create column Tag
+######## create interest score into array
 df1['interests'] = ''
 
 tags = [
@@ -27,9 +31,19 @@ tags = [
     "US Politics","Writing"
 ]
 
-"""
-
 for i, row in df1.iterrows():
+    date_added = row['action_time']
+    date_added = datetime.strptime(date_added, "%Y-%m-%d %H:%M:%S.%f")
+    today = datetime.now()
+    difference = today - date_added.replace()
+    days_diff = difference.days
+    if days_diff <= 0:
+        time_decay_multiplier = today_weight
+    elif days_diff < 1:
+        time_decay_multiplier = 1
+    else:
+        time_decay_multiplier = math.log(days_diff)
+
     post_id = row['post_id']
     viewed = row['viewed']
     voted = row['voted']
@@ -55,15 +69,15 @@ for i, row in df1.iterrows():
         try:
             index = tags.index(tag)
             if viewed > 0:
-                interests[index] += views_weight
+                interests[index] += views_weight / time_decay_multiplier
             elif voted > 0:
-                interests[index] += responses_weight
+                interests[index] += responses_weight / time_decay_multiplier
             elif liked > 0:
-                interests[index] += likes_weight
+                interests[index] += likes_weight / time_decay_multiplier
             elif commented > 0:
-                interests[index] += comments_weight
+                interests[index] += comments_weight / time_decay_multiplier
             elif skipped > 0:
-                interests[index] -= skips_weight
+                interests[index] -= skips_weight / time_decay_multiplier
         except ValueError:
             print(f"'{tag}' not found in the list")    
 
@@ -81,14 +95,11 @@ result = result.reset_index()
 
 # Write the result to a new CSV file
 result.to_csv('interest-output.csv', index=False)
-
-print(result.head())
-
 print("processed user interests")
 
-"""
-result_input_path = 'interest-output.csv'
-final_output_path = "interest-viral-index-output.csv"
+
+# splitting interest array into fields
+result_input_path = output_file_path
 df = pd.read_csv(result_input_path, encoding='utf-8')
 
 # Create a list to hold the transformed data
@@ -111,6 +122,8 @@ for index, row in df.iterrows():
 
 # Create a new DataFrame from the list of rows
 output_df = pd.DataFrame(rows_list)
+
+print("finished spliiting interests into fields")
 
 # Write the output DataFrame to a new CSV file
 output_df.to_csv(final_output_path, encoding='utf-8', index=False)
