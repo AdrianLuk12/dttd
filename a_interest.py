@@ -9,7 +9,6 @@ views_weight = 0.1
 responses_weight = 0.4
 likes_weight = 0.5
 comments_weight = 1
-bookmarks_weight = 0.6
 skips_weight = 0.4
 
 # load file
@@ -89,7 +88,8 @@ for i, row in df1.iterrows():
 #df1['interests'] = df1['interests'].apply(ast.literal_eval)
 
 # Group by persona_id and sum the Interests arrays
-result = df1.groupby('persona_id')['interests'].apply(lambda x: [round(sum(i),2) for i in zip(*x)])
+#result = df1.groupby('persona_id')['interests'].apply(lambda x: [round(sum(i),2) for i in zip(*x)])
+result = df1.groupby('persona_id')['interests'].apply(lambda x: [max(0, round(sum(i), 2)) for i in zip(*x)]) # max is 0
 
 # Reset the index to make persona_id a column again
 result = result.reset_index()
@@ -98,6 +98,7 @@ result = result.reset_index()
 result.to_csv('interest-output.csv', index=False)
 print("processed user interests")
 
+""" # disabled adjusting interest by number of interactions
 ##### dividing the score by the number of interactions:
 result_input_path = output_file_path
 
@@ -125,9 +126,10 @@ interest_df['adjusted_interests'] = interest_df.apply(adjust_interests, axis=1)
 interest_df.to_csv(output_file_path, index=False)
 
 print("adjusted interests by number of interactions")
-
+"""
 
 ##### splitting interest array into fields
+result_input_path = output_file_path
 df = pd.read_csv(result_input_path, encoding='utf-8')
 
 # Create a list to hold the transformed data
@@ -136,10 +138,10 @@ rows_list = []
 # Process each row in the input DataFrame
 for index, row in df.iterrows():
     # Convert the interests string to a list
-    interests = ast.literal_eval(row['adjusted_interests'])
+    interests = ast.literal_eval(row['interests'])
     
     # Create a new row dictionary
-    new_row = {'persona_id': row['persona_id'], 'interests': row['adjusted_interests']}
+    new_row = {'persona_id': row['persona_id'], 'interests': row['interests']}
     
     # Populate the dictionary with interest values for each tag
     for i, tag in enumerate(tags):
