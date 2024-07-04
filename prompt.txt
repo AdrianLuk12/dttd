@@ -10,4 +10,4 @@ rpt_year,rpt_month,rpt_day,action_time,persona_id,post_id,viewed,voted,liked,com
 
 2024,6,1,2024-06-01 00:34:44.073,47b20ccc1495-4c4a6d44,1716990568322-gil5r62W,1,0,0,0,0
 
-Two files are linked by post_id. Please provide insights on what kind of data analysis can be conducted.
+Two files are linked by post_id. Please create a python script with pandas that finds the the association/correlation between the group of users that engage the most with each topic (tag).
