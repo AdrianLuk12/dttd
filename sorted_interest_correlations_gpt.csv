@@ -1,0 +1,667 @@
+Topic1,Topic2,Correlation
+Anime,Cryptocurrency,
+Anime,Dating,0.7371725050929481
+Anime,Friendship,0.5003912523674242
+Anime,Fashion,0.43443284011978345
+Anime,LGBTQ+,
+Anime,Life choices,0.3747370751531978
+Anime,News,
+Anime,Painting,
+Anime,Sports,0.6351536569615371
+Anime,Family,0.5039825284052333
+Anime,Stock market updates,
+Anime,TV shows,0.9435404622282512
+Anime,Travel,0.4178578978564775
+Anime,Music,-0.37604787456277666
+Anime,Nature,0.36657038722598995
+Anime,New gadgets,0.29142779306199207
+Anime,Kpop,-0.2875848927557867
+Anime,Art,0.28621306149864734
+Anime,Fitness,-0.25901849584732284
+Anime,Personal finance tips,0.2539342026433863
+Anime,Business and Finance,0.24594787596164364
+Anime,Celebs,-0.2229467785144862
+Anime,Movies,-0.2139082428559665
+Anime,Gaming,-0.16262699570026695
+Anime,Mental health,0.10194327665472729
+Anime,Personal Experiences,-0.09123294611920423
+Anime,Hypothetical,0.08375773499487643
+Anime,Food and dining experiences,-0.08070643895469724
+Anime,Horoscope,-0.032710423362413255
+Anime,Global Politics,0.02200657608255149
+Anime,US Politics,0.021335316686193834
+Anime,Software updates,0.020720324293262052
+Anime,Ethics,-0.02052834060914537
+Anime,Current Events,0.02019458023268043
+Anime,Social justice,-0.01733266879255828
+Anime,Writing,-0.0024360485857649328
+Art,Cryptocurrency,
+Art,LGBTQ+,
+Art,New gadgets,0.8940460577387535
+Art,Music,-0.20928263324639051
+Art,News,
+Art,Painting,
+Art,Sports,0.355266844446275
+Art,Stock market updates,
+Art,Travel,0.7523435359433523
+Art,Friendship,0.6804435674567979
+Art,Family,0.6693108376509233
+Art,Dating,0.44737969003814987
+Art,TV shows,0.3106567658309857
+Art,Fashion,0.2986026142275364
+Art,Business and Finance,0.18756637740518872
+Business and Finance,Cryptocurrency,
+Business and Finance,Fashion,0.2260824755115941
+Business and Finance,Dating,0.1977549300226528
+Business and Finance,Family,0.1976975391245641
+Art,Life choices,0.1882806524441748
+Art,Personal finance tips,0.18644552767582967
+Art,Fitness,-0.18080356520993843
+Art,Kpop,-0.17792643287996482
+Business and Finance,Celebs,-0.16470173542820382
+Art,Celebs,-0.14487012157751436
+Art,Movies,-0.14106046694476151
+Art,Nature,0.10362032885770771
+Art,Gaming,-0.09186418178986912
+Art,Ethics,-0.08820947935438829
+Art,Social justice,0.08705462123463037
+Art,Food and dining experiences,0.06401164564571192
+Art,Mental health,0.05685007139274731
+Art,Personal Experiences,-0.04869517518514635
+Art,Software updates,0.04520613961032599
+Art,Horoscope,0.03489759161144383
+Art,Writing,0.034661417688325744
+Business and Finance,Ethics,0.034216897151374305
+Business and Finance,Current Events,0.01712163412887807
+Art,Hypothetical,0.012740415113606223
+Art,US Politics,-0.008954340867814246
+Art,Current Events,0.004028042664249543
+Art,Global Politics,0.0006342150668958604
+Business and Finance,LGBTQ+,
+Business and Finance,Music,-0.25643217536996066
+Business and Finance,News,
+Business and Finance,Painting,
+Business and Finance,Stock market updates,
+Celebs,Cryptocurrency,
+Celebs,Kpop,0.9913592669909673
+Business and Finance,Personal finance tips,0.9834170629434654
+Celebs,Fitness,-0.24858155359845197
+Business and Finance,TV shows,0.23367554445150537
+Celebs,Ethics,-0.21702120876195607
+Celebs,Friendship,-0.2092022764221078
+Celebs,Family,-0.20881049620748873
+Business and Finance,Travel,0.1999286816009996
+Business and Finance,Friendship,0.1997545260037164
+Celebs,Dating,-0.19857960304074126
+Business and Finance,Nature,0.19699597251393725
+Business and Finance,New gadgets,0.1857688478552216
+Business and Finance,Kpop,-0.18014988757846018
+Business and Finance,Fitness,-0.17994790774441574
+Business and Finance,Sports,0.1708540091337364
+Business and Finance,Movies,-0.15730663347052212
+Business and Finance,Personal Experiences,-0.14229071372472696
+Celebs,Hypothetical,-0.14062168180628318
+Celebs,Gaming,-0.1296789490781268
+Business and Finance,Life choices,0.11644599061595053
+Business and Finance,Gaming,-0.10937961259904312
+Celebs,Food and dining experiences,-0.09960876703043686
+Celebs,Fashion,-0.09724294538867187
+Business and Finance,Food and dining experiences,-0.058121886243172306
+Business and Finance,Mental health,-0.04460469723890139
+Business and Finance,Hypothetical,-0.02387868018259721
+Business and Finance,Horoscope,-0.02141136775130421
+Business and Finance,Global Politics,0.0174865295049326
+Business and Finance,Writing,0.0174211784184433
+Business and Finance,US Politics,0.01501749869530999
+Business and Finance,Social justice,-0.012938100328158501
+Business and Finance,Software updates,0.010582450889436828
+Celebs,Current Events,-0.004225688976750768
+Celebs,Global Politics,-0.0039034744670725504
+Celebs,Horoscope,-0.0028298270925847927
+Celebs,LGBTQ+,
+Celebs,Music,0.6422661809942606
+Celebs,Nature,-0.24263385116438918
+Celebs,News,
+Celebs,Painting,
+Celebs,Personal Experiences,-0.5222693760463332
+Celebs,Life choices,-0.44516959407587914
+Celebs,Mental health,0.24858066691766656
+Celebs,Personal finance tips,-0.17882909290994242
+Celebs,New gadgets,-0.14201216106253636
+Celebs,Sports,-0.12476032995746163
+Celebs,Stock market updates,
+Celebs,TV shows,-0.21686878820808417
+Celebs,Travel,-0.1782070405165459
+Celebs,Movies,-0.06411909241131376
+Celebs,Social justice,0.009594438097548225
+Celebs,Software updates,0.004323475548980746
+Celebs,US Politics,-0.0043149059586999805
+Celebs,Writing,-0.004099386996986097
+Cryptocurrency,Current Events,
+Cryptocurrency,Dating,
+Cryptocurrency,Ethics,
+Cryptocurrency,Family,
+Cryptocurrency,Fashion,
+Cryptocurrency,Fitness,
+Cryptocurrency,Food and dining experiences,
+Cryptocurrency,Friendship,
+Cryptocurrency,Gaming,
+Cryptocurrency,Global Politics,
+Cryptocurrency,Horoscope,
+Cryptocurrency,Hypothetical,
+Cryptocurrency,Kpop,
+Cryptocurrency,LGBTQ+,
+Cryptocurrency,Life choices,
+Cryptocurrency,Mental health,
+Cryptocurrency,Movies,
+Cryptocurrency,Music,
+Cryptocurrency,Nature,
+Cryptocurrency,New gadgets,
+Cryptocurrency,News,
+Cryptocurrency,Painting,
+Cryptocurrency,Personal Experiences,
+Cryptocurrency,Personal finance tips,
+Cryptocurrency,Social justice,
+Cryptocurrency,Software updates,
+Cryptocurrency,Sports,
+Cryptocurrency,Stock market updates,
+Cryptocurrency,TV shows,
+Cryptocurrency,Travel,
+Cryptocurrency,US Politics,
+Cryptocurrency,Writing,
+Current Events,Global Politics,0.9927952127256422
+Current Events,LGBTQ+,
+Current Events,News,
+Current Events,Painting,
+Current Events,Stock market updates,
+Current Events,US Politics,0.9778428343373307
+Dating,Family,0.7734102573048344
+Dating,Friendship,0.7709757002222447
+Dating,Fashion,0.5442864907984252
+Fashion,Friendship,0.4726269936231887
+Ethics,Nature,0.3511785873446848
+Current Events,Travel,0.1732656665996724
+Current Events,Sports,0.161795818290823
+Current Events,Fashion,0.14705624437424003
+Current Events,TV shows,0.13797528340458948
+Current Events,Writing,0.11326472778848198
+Current Events,Software updates,0.08468342196985984
+Current Events,Food and dining experiences,0.07849348802275229
+Current Events,Family,0.07822003784014007
+Dating,Ethics,-0.07819361509902734
+Current Events,Social justice,0.06764876770312891
+Current Events,New gadgets,0.05720308063923489
+Current Events,Personal Experiences,-0.045224795949962926
+Current Events,Friendship,0.03939480518665203
+Current Events,Fitness,-0.03642682204086032
+Current Events,Kpop,-0.025607355808825588
+Current Events,Music,-0.022866987323775876
+Current Events,Movies,-0.018074733582472247
+Current Events,Life choices,0.01772120023463078
+Current Events,Personal finance tips,0.015733162936168988
+Current Events,Ethics,-0.01029823304303807
+Current Events,Horoscope,0.008288892570878448
+Current Events,Gaming,-0.006614685216534457
+Current Events,Hypothetical,-0.004730288430071135
+Current Events,Nature,0.0012919728321854193
+Current Events,Dating,-0.0007901252737970883
+Current Events,Mental health,0.000513123256524227
+Dating,LGBTQ+,
+Dating,New gadgets,0.4627323784980049
+Dating,News,
+Dating,Painting,
+Dating,Stock market updates,
+Dating,TV shows,0.7474094830614589
+Dating,Travel,0.6594433969589072
+Dating,Sports,0.5502533771798747
+Dating,Music,-0.35508772996438903
+Dating,Life choices,0.3383018040825225
+Dating,Nature,0.33529574553121666
+Dating,Fitness,-0.27979637044012007
+Dating,Kpop,-0.27503238846395717
+Dating,Movies,-0.20996513592006485
+Ethics,Kpop,-0.2070922304967659
+Dating,Personal finance tips,0.20526591989540693
+Ethics,LGBTQ+,
+Ethics,Music,-0.30081896039188477
+Ethics,Mental health,-0.20578793103973905
+Ethics,Hypothetical,-0.19687827574398098
+Ethics,Fitness,-0.17666800074582434
+Ethics,Movies,-0.1695603667893443
+Dating,Gaming,-0.15503558787827823
+Ethics,Gaming,-0.11593104293991109
+Ethics,Life choices,-0.11231418817396314
+Ethics,Food and dining experiences,-0.10843829572074047
+Dating,Mental health,0.10414912626059264
+Ethics,Family,-0.10060048119700139
+Ethics,Friendship,-0.1002672022518472
+Dating,Personal Experiences,-0.08549651321398294
+Ethics,Fashion,-0.07462640985256459
+Dating,Hypothetical,0.06649708384674623
+Dating,Horoscope,-0.02921081740749929
+Dating,Software updates,0.022461036646664084
+Dating,Writing,0.015251230355039572
+Ethics,Horoscope,-0.014565345675191504
+Ethics,Global Politics,-0.009280587539827252
+Dating,Social justice,-0.0066255094357182895
+Dating,US Politics,-0.005332464770308804
+Dating,Food and dining experiences,-0.0037732406821109274
+Dating,Global Politics,-0.0020749543764580604
+Ethics,News,
+Ethics,Painting,
+Ethics,Stock market updates,
+Family,Friendship,0.9874345339264124
+Family,LGBTQ+,
+Family,New gadgets,0.6731964396882175
+Family,Fashion,0.47686119360521173
+Ethics,Personal Experiences,0.35140865960486584
+Family,Life choices,0.2613563654805846
+Family,Fitness,-0.24351111281643584
+Family,News,
+Family,Painting,
+Family,Stock market updates,
+Family,Travel,0.8551483307154295
+Family,TV shows,0.5111585578782528
+Fashion,LGBTQ+,
+Fashion,New gadgets,0.3303421196232329
+Fashion,News,
+Fashion,Painting,
+Fashion,Stock market updates,
+Fashion,TV shows,0.4659602829915715
+Fashion,Travel,0.45668631232436174
+Fitness,Hypothetical,-0.4009625456895725
+Family,Sports,0.3818115174546473
+Fashion,Sports,0.3288607523107496
+Family,Music,-0.31531734930352645
+Fitness,LGBTQ+,
+Fitness,Mental health,-0.28097055998712306
+Fitness,Music,-0.26861273603223135
+Family,Kpop,-0.2481347959810627
+Fitness,Friendship,-0.24720604322196293
+Family,Nature,0.2425568590755965
+Fitness,Nature,-0.22737807579889957
+Fashion,Nature,0.2219269747940192
+Fitness,Kpop,-0.22099761975581309
+Fashion,Music,-0.2102271834520874
+Fashion,Writing,0.20756364710231762
+Family,Personal finance tips,0.20335278554075298
+Family,Movies,-0.20133833536703205
+Fashion,Life choices,0.1955878015568556
+Fashion,Fitness,-0.19428185025162167
+Fitness,New gadgets,-0.1900530848191803
+Fitness,Food and dining experiences,-0.16013950160653592
+Fitness,Gaming,-0.159383302674068
+Fashion,Movies,-0.14586101994629333
+Fashion,Global Politics,0.14234590256407287
+Family,Gaming,-0.13712303384518768
+Fashion,Kpop,-0.13695219618330984
+Fitness,Life choices,-0.13275350354754453
+Fashion,US Politics,0.11757135132270713
+Fashion,Personal finance tips,0.11103761050555089
+Fashion,Gaming,-0.10510721984390496
+Ethics,Travel,-0.10111574827331381
+Family,Mental health,0.10022327354519849
+Fitness,Movies,-0.0935186774416984
+Fashion,Software updates,0.08945263638978167
+Ethics,New gadgets,-0.08595636361163249
+Family,US Politics,0.08122537000386595
+Family,Global Politics,0.08060626618669536
+Fashion,Personal Experiences,-0.07835830834559888
+Fashion,Social justice,0.053442526767952185
+Family,Personal Experiences,-0.04170377948572922
+Ethics,Sports,-0.038382166305923573
+Ethics,Personal finance tips,0.03821153495902779
+Fashion,Mental health,0.036046959814338274
+Fitness,Global Politics,-0.03447371410637733
+Ethics,TV shows,-0.03194347901392825
+Family,Hypothetical,0.028826821922323546
+Family,Horoscope,-0.026595370945091425
+Ethics,Social justice,-0.023809269024978038
+Family,Social justice,-0.021573227152676705
+Fashion,Food and dining experiences,-0.017280073842867883
+Fashion,Horoscope,-0.013338629176902834
+Ethics,Writing,-0.01282367173725191
+Fitness,Horoscope,-0.012794766692079414
+Ethics,Software updates,-0.011939463370985767
+Family,Software updates,0.010050566208788669
+Ethics,US Politics,-0.006329800601255382
+Family,Food and dining experiences,-0.003115439032271163
+Family,Writing,0.001856760438634993
+Fashion,Hypothetical,0.0009869533716227131
+Fitness,News,
+Fitness,Painting,
+Fitness,Personal Experiences,0.7116755800455421
+Fitness,Stock market updates,
+Food and dining experiences,Gaming,0.4462881090308869
+Food and dining experiences,Hypothetical,0.2954273547754388
+Fitness,TV shows,-0.26765147676168083
+Fitness,Travel,-0.24627059029896
+Fitness,Sports,-0.18837806810296098
+Fitness,Personal finance tips,-0.17723921599035955
+Food and dining experiences,LGBTQ+,
+Food and dining experiences,News,
+Food and dining experiences,Painting,
+Food and dining experiences,Stock market updates,
+Friendship,Kpop,-0.24768588816995982
+Food and dining experiences,Personal Experiences,-0.14693543941285744
+Friendship,Gaming,-0.13769671972977973
+Food and dining experiences,Kpop,-0.1130904595705148
+Food and dining experiences,Mental health,-0.10661844026660815
+Food and dining experiences,Nature,-0.10420926243835096
+Food and dining experiences,Movies,-0.08854922376001671
+Food and dining experiences,Global Politics,0.07558336150875772
+Food and dining experiences,New gadgets,0.0671448845843805
+Food and dining experiences,US Politics,0.06630830266735241
+Food and dining experiences,Music,-0.06224449188804377
+Food and dining experiences,Personal finance tips,-0.05872469058798244
+Food and dining experiences,TV shows,-0.05713531419725408
+Food and dining experiences,Horoscope,0.05192546314027594
+Food and dining experiences,Social justice,0.048867647593613575
+Food and dining experiences,Software updates,0.042457436073354664
+Friendship,Global Politics,0.041606544465273176
+Food and dining experiences,Travel,0.0411669615775977
+Food and dining experiences,Writing,0.03578151868306559
+Friendship,Hypothetical,0.03127939567845045
+Fitness,Writing,-0.031005287780162344
+Fitness,US Politics,-0.03055580984560743
+Friendship,Horoscope,-0.0279183352255524
+Fitness,Social justice,-0.027610546786743885
+Fitness,Software updates,-0.020118417101647412
+Food and dining experiences,Sports,0.01872612953810661
+Food and dining experiences,Friendship,-0.006015422633377588
+Food and dining experiences,Life choices,0.0038372403576224672
+Friendship,LGBTQ+,
+Friendship,News,
+Friendship,Painting,
+Friendship,Stock market updates,
+Friendship,Travel,0.8811822913397401
+Gaming,Hypothetical,0.7150308637135437
+Friendship,New gadgets,0.6851789857570484
+Friendship,TV shows,0.505239374781087
+Friendship,Sports,0.3789599088165009
+Friendship,Music,-0.3154906359407235
+Friendship,Life choices,0.2619935425319502
+Friendship,Nature,0.23704503998102655
+Friendship,Personal finance tips,0.20649160488661708
+Friendship,Movies,-0.20215337923670423
+Gaming,LGBTQ+,
+Gaming,Mental health,-0.18049764943944524
+Gaming,News,
+Gaming,Painting,
+Gaming,Personal Experiences,-0.23520407750829023
+Gaming,Life choices,-0.18522703333630103
+Gaming,Personal finance tips,-0.10938295366095618
+Gaming,Sports,-0.10832439244980278
+Gaming,Stock market updates,
+Gaming,TV shows,-0.15692054675739533
+Gaming,Nature,-0.15344665238631644
+Gaming,Travel,-0.11855266961181245
+Gaming,Kpop,-0.11413549793470912
+Gaming,Music,-0.10881422720891967
+Gaming,Movies,-0.10513524539762953
+Friendship,Mental health,0.10376422542256172
+Gaming,New gadgets,-0.09054598884683684
+Friendship,US Politics,0.042657414836670814
+Friendship,Personal Experiences,-0.0402327763428266
+Friendship,Writing,0.0342765033427027
+Friendship,Social justice,-0.02108674692035549
+Gaming,US Politics,-0.01068578663815086
+Gaming,Global Politics,-0.008346400100221646
+Gaming,Horoscope,-0.007838942250186763
+Gaming,Writing,-0.007834486953973608
+Global Politics,Horoscope,0.007401601834220133
+Gaming,Social justice,-0.004420946745143982
+Gaming,Software updates,0.0033468070776456744
+Friendship,Software updates,0.002832229149942568
+Global Politics,LGBTQ+,
+Global Politics,News,
+Global Politics,Painting,
+Global Politics,Sports,0.13366498590477568
+Global Politics,Stock market updates,
+Global Politics,US Politics,0.9862750326691473
+Global Politics,Writing,0.11841112866324877
+Global Politics,Software updates,0.06174070162574495
+Horoscope,LGBTQ+,
+Horoscope,News,
+Horoscope,Painting,
+Horoscope,Social justice,0.8146657825584683
+Global Politics,Travel,0.16667932221179357
+Global Politics,TV shows,0.13519294725914757
+Horoscope,New gadgets,0.07116472871263865
+Horoscope,Stock market updates,
+Horoscope,Travel,0.08519596990680531
+Horoscope,TV shows,0.056000645693094396
+Global Politics,Social justice,0.05381280526627388
+Global Politics,New gadgets,0.049048117318302595
+Global Politics,Personal Experiences,-0.04320678333998678
+Horoscope,Software updates,0.037348692526179325
+Global Politics,Kpop,-0.024796093475535054
+Global Politics,Music,-0.02342343794332207
+Horoscope,Personal finance tips,-0.021665254472480928
+Global Politics,Movies,-0.018732457204573474
+Horoscope,Sports,-0.018428724938583153
+Horoscope,Personal Experiences,-0.017320705773485552
+Global Politics,Life choices,0.01693529733370392
+Horoscope,Hypothetical,0.016471533052229835
+Global Politics,Personal finance tips,0.015986067725482864
+Horoscope,Mental health,0.0155395614547532
+Horoscope,Movies,0.015026226709388581
+Horoscope,Music,0.009885604928872005
+Horoscope,Writing,0.006461107734532172
+Global Politics,Hypothetical,-0.005428878243708582
+Horoscope,Kpop,-0.004153213124409286
+Global Politics,Nature,0.002471597886456969
+Horoscope,US Politics,0.0021595540154108225
+Global Politics,Mental health,0.002027196927249566
+Horoscope,Life choices,-0.0015536895945865927
+Horoscope,Nature,-0.00098818085152534
+Hypothetical,LGBTQ+,
+Hypothetical,Mental health,0.3544212281152764
+Hypothetical,News,
+Hypothetical,Painting,
+Hypothetical,Personal Experiences,-0.5085545213507164
+Hypothetical,Kpop,-0.14357922377407129
+Hypothetical,Stock market updates,
+Kpop,LGBTQ+,
+Kpop,Music,0.6609156547399356
+Kpop,Nature,-0.2602438223464334
+Kpop,News,
+Kpop,Painting,
+Kpop,Personal Experiences,-0.5014361464997675
+Kpop,Life choices,-0.46756570051323343
+Kpop,Stock market updates,
+Kpop,TV shows,-0.2789379928380086
+Kpop,Mental health,0.2411683418293052
+Kpop,Travel,-0.22322628027259053
+Kpop,Sports,-0.21587297255065596
+Kpop,Personal finance tips,-0.19429432614357917
+Kpop,New gadgets,-0.17682709421657883
+Hypothetical,Music,-0.136151898651361
+Hypothetical,Life choices,0.11304988643680691
+Hypothetical,Movies,-0.08516888128609174
+Hypothetical,TV shows,0.08207882036388266
+Kpop,Movies,-0.04727147179336618
+Hypothetical,Sports,0.03842131809896923
+Hypothetical,Travel,0.03744701611442135
+Kpop,Writing,-0.029477302855424062
+Kpop,US Politics,-0.021400043527366765
+Hypothetical,Social justice,0.01860907297223508
+Hypothetical,Personal finance tips,-0.016666070685353532
+Hypothetical,Nature,-0.013499853931984388
+Kpop,Software updates,-0.011144978693782812
+Hypothetical,New gadgets,0.008663805733694262
+Hypothetical,US Politics,-0.005249667230762133
+Hypothetical,Software updates,-0.0020808092632444214
+Kpop,Social justice,-0.0019488753390027047
+Hypothetical,Writing,-0.0012491825647728348
+LGBTQ+,Life choices,
+LGBTQ+,Mental health,
+LGBTQ+,Movies,
+LGBTQ+,Music,
+LGBTQ+,Nature,
+LGBTQ+,New gadgets,
+LGBTQ+,News,
+LGBTQ+,Painting,
+LGBTQ+,Personal Experiences,
+LGBTQ+,Personal finance tips,
+LGBTQ+,Social justice,
+LGBTQ+,Software updates,
+LGBTQ+,Sports,
+LGBTQ+,Stock market updates,
+LGBTQ+,TV shows,
+LGBTQ+,Travel,
+LGBTQ+,US Politics,
+LGBTQ+,Writing,
+Life choices,Music,-0.40822097270893276
+Life choices,News,
+Life choices,Painting,
+Life choices,Stock market updates,
+Life choices,TV shows,0.36411495360202123
+Life choices,Sports,0.25011358557021746
+Life choices,Travel,0.22865502116329875
+Life choices,Nature,0.20881979015509372
+Life choices,Personal Experiences,0.1899936621977628
+Life choices,New gadgets,0.18917999173804614
+Life choices,Movies,-0.16200635659979487
+Mental health,Music,0.15321632373244096
+Life choices,Personal finance tips,0.127231333451202
+Life choices,Mental health,-0.06279751723285573
+Mental health,Nature,-0.05860787516841394
+Mental health,New gadgets,0.049189926710015444
+Life choices,Writing,0.03548027298535794
+Life choices,US Politics,0.016637457910639506
+Mental health,Movies,-0.01641202673011972
+Life choices,Social justice,-0.008555812363946556
+Life choices,Software updates,0.005071140816083086
+Mental health,News,
+Mental health,Painting,
+Mental health,Personal Experiences,-0.3998690011149185
+Mental health,Personal finance tips,-0.04003684911924425
+Mental health,Social justice,0.014821519903790126
+Mental health,Software updates,-0.006740791909887759
+Mental health,Stock market updates,
+Movies,Music,0.6732196308050999
+Movies,News,
+Movies,Painting,
+Movies,Stock market updates,
+Music,News,
+Music,Painting,
+Music,Personal Experiences,-0.5912511162097751
+Music,Stock market updates,
+Music,TV shows,-0.36019503733441366
+Music,Nature,-0.35907824249675035
+Movies,Personal Experiences,-0.29847929136913615
+Music,Travel,-0.2736255058552647
+Music,Personal finance tips,-0.26573681234896973
+Music,Sports,-0.26533946153830124
+Music,New gadgets,-0.2098624524424303
+Movies,TV shows,-0.20475093150248946
+Movies,Nature,-0.20346595056187153
+Movies,Travel,-0.17758394820140241
+Movies,Sports,-0.16444396366096242
+Movies,Personal finance tips,-0.15657010881014638
+Movies,New gadgets,-0.137281136007174
+Mental health,TV shows,0.1009267074139974
+Mental health,Travel,0.09662878441563795
+Mental health,Sports,0.05747924857083303
+Movies,US Politics,-0.018751826983708222
+Movies,Writing,-0.00924789589250117
+Nature,News,
+Nature,Painting,
+Nature,Personal finance tips,0.20353554186968337
+Nature,New gadgets,0.10163871019404515
+Music,Writing,-0.026192691689277663
+Music,US Politics,-0.020804041275387975
+Nature,Personal Experiences,0.018217380136852958
+Music,Software updates,-0.010342101735067433
+Mental health,Writing,-0.009649733170364832
+Movies,Social justice,0.008850991371573426
+Music,Social justice,0.006106103864698422
+Movies,Software updates,-0.005635712405841555
+Mental health,US Politics,0.0038402396478389765
+Nature,Social justice,0.0031244588124317756
+Nature,Software updates,-0.0022516416864529244
+Nature,Stock market updates,
+Nature,TV shows,0.3622707329993311
+Nature,Sports,0.202093220992377
+New gadgets,News,
+New gadgets,Painting,
+New gadgets,Stock market updates,
+New gadgets,Travel,0.7832105915137326
+New gadgets,TV shows,0.3299940927586126
+New gadgets,Sports,0.3093711149129287
+New gadgets,Personal finance tips,0.18904333281888847
+Nature,Travel,0.18327414261606104
+New gadgets,Software updates,0.12914216468617842
+New gadgets,Writing,0.10613790129890006
+New gadgets,Social justice,0.07411667330736481
+New gadgets,Personal Experiences,-0.052571789481882944
+New gadgets,US Politics,0.016146629968590658
+Nature,Writing,0.014471746557194546
+Nature,US Politics,0.004829953721843038
+News,Painting,
+News,Personal Experiences,
+News,Personal finance tips,
+News,Social justice,
+News,Software updates,
+News,Sports,
+News,Stock market updates,
+News,TV shows,
+News,Travel,
+News,US Politics,
+News,Writing,
+Painting,Personal Experiences,
+Painting,Personal finance tips,
+Painting,Social justice,
+Painting,Software updates,
+Painting,Sports,
+Painting,Stock market updates,
+Painting,TV shows,
+Painting,Travel,
+Painting,US Politics,
+Painting,Writing,
+Personal Experiences,Personal finance tips,-0.1344386710231442
+Personal Experiences,Social justice,-0.03372273094895598
+Personal Experiences,Software updates,-0.017160216058969634
+Personal Experiences,Stock market updates,
+Personal finance tips,Stock market updates,
+Personal finance tips,TV shows,0.24101556793910112
+Personal finance tips,Travel,0.2029059891795385
+Social justice,Software updates,0.12228013147739285
+Social justice,Stock market updates,
+Software updates,Stock market updates,
+Sports,Stock market updates,
+Sports,TV shows,0.6014373618466448
+Sports,Travel,0.39464904092557873
+Personal finance tips,Sports,0.17567089971011945
+Social justice,Travel,0.1639972068101876
+Stock market updates,TV shows,
+Stock market updates,Travel,
+Stock market updates,US Politics,
+Stock market updates,Writing,
+TV shows,Travel,0.46319374028906896
+Travel,US Politics,0.1379408876048691
+TV shows,US Politics,0.1255354897806738
+Sports,US Politics,0.11798961983431532
+Travel,Writing,0.11546499777562283
+Software updates,Writing,0.10863040288355084
+Personal Experiences,TV shows,-0.1055073188901931
+Social justice,TV shows,0.09914464480864578
+Software updates,Travel,0.09675538085745006
+Social justice,Writing,0.08559181560139038
+Sports,Writing,0.07780628139165845
+Personal Experiences,Sports,-0.07133227583174057
+Software updates,Sports,0.06592382705277967
+Personal Experiences,Travel,-0.06566293704856016
+US Politics,Writing,0.0612047273320394
+Software updates,TV shows,0.056519623412872526
+Social justice,Sports,0.04698431870131769
+Personal Experiences,US Politics,-0.04009602495729189
+TV shows,Writing,0.03122746669749363
+Software updates,US Politics,0.017449218752516118
+Social justice,US Politics,0.016364122133969036
+Personal finance tips,US Politics,0.0147908566706934
+Personal finance tips,Social justice,-0.014156955948013233
+Personal finance tips,Writing,0.013941437076237876
+Personal Experiences,Writing,-0.010855638316009063
+Personal finance tips,Software updates,0.006879241046620608
