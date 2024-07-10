@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-# Load only the wyr-entry data
+# Load the data
 wyr_entry = pd.read_csv('wyr-entry.csv')
 
 # Convert action_time to datetime
@@ -9,27 +9,24 @@ wyr_entry['action_time'] = pd.to_datetime(wyr_entry['action_time'])
 
 # Extract time-related features
 wyr_entry['hour'] = wyr_entry['action_time'].dt.hour
-wyr_entry['day_of_week'] = wyr_entry['action_time'].dt.dayofweek
-wyr_entry['is_weekend'] = wyr_entry['day_of_week'].isin([5, 6]).astype(int)
+wyr_entry['day_of_week'] = wyr_entry['action_time'].dt.day_name()
+wyr_entry['is_weekend'] = wyr_entry['action_time'].dt.dayofweek.isin([5, 6]).map({True: 'weekend', False: 'weekday'})
 
 # Calculate skip rates
 def calculate_skip_rate(group):
-    return group['skipped'].sum() / len(group)
+    return group['skipped'].sum() / len(group) * 100
 
 # Time of day analysis
 hourly_skip_rate = wyr_entry.groupby('hour').apply(calculate_skip_rate).reset_index()
-hourly_skip_rate.columns = ['category', 'skip_rate']
-hourly_skip_rate['analysis_type'] = 'hourly'
+hourly_skip_rate.columns = ['hour', 'skip_rate']
 
 # Day of week analysis
 daily_skip_rate = wyr_entry.groupby('day_of_week').apply(calculate_skip_rate).reset_index()
-daily_skip_rate.columns = ['category', 'skip_rate']
-daily_skip_rate['analysis_type'] = 'daily'
+daily_skip_rate.columns = ['day_of_week', 'skip_rate']
 
 # Weekend vs Weekday analysis
 weekend_skip_rate = wyr_entry.groupby('is_weekend').apply(calculate_skip_rate).reset_index()
-weekend_skip_rate.columns = ['category', 'skip_rate']
-weekend_skip_rate['analysis_type'] = 'weekend'
+weekend_skip_rate.columns = ['is_weekend', 'skip_rate']
 
 # Time in app session analysis
 wyr_entry = wyr_entry.sort_values(['persona_id', 'action_time'])
@@ -42,7 +39,6 @@ wyr_entry['time_bin'] = pd.cut(wyr_entry['time_since_last'], bins=time_bins, lab
 
 time_bin_skip_rate = wyr_entry.groupby('time_bin').apply(calculate_skip_rate).reset_index()
 time_bin_skip_rate.columns = ['category', 'skip_rate']
-time_bin_skip_rate['analysis_type'] = 'time_bin'
 
 # New analysis: Time till next action after a skip
 wyr_entry['time_to_next'] = wyr_entry.groupby('persona_id')['action_time'].diff().shift(-1).dt.total_seconds()
@@ -51,45 +47,35 @@ skipped_actions = wyr_entry[wyr_entry['skipped'] == 1].copy()  # Create a copy t
 skipped_actions['time_to_next_bin'] = pd.cut(skipped_actions['time_to_next'], bins=time_bins, labels=time_labels)
 time_to_next_distribution = skipped_actions['time_to_next_bin'].value_counts(normalize=True).reset_index()
 time_to_next_distribution.columns = ['category', 'skip_rate']
-time_to_next_distribution['analysis_type'] = 'time_to_next'
 
-# Combine all analyses into a single dataframe
-combined_data = pd.concat([
-    hourly_skip_rate,
-    daily_skip_rate,
-    weekend_skip_rate,
-    time_bin_skip_rate,
-    time_to_next_distribution
-], ignore_index=True)
+# Export results to CSV files
+hourly_skip_rate.to_csv('./skips/hourly_skip_rate.csv', index=False)
+daily_skip_rate.to_csv('./skips/daily_skip_rate.csv', index=False)
+weekend_skip_rate.to_csv('./skips/weekend_skip_rate.csv', index=False)
+time_bin_skip_rate.to_csv('./skips/time_bin_skip_rate.csv', index=False)
+time_to_next_distribution.to_csv('./skips/time_to_next_distribution.csv', index=False)
 
-# Add summary statistics
+# Create a summary dataframe for overall statistics
 summary_stats = pd.DataFrame({
-    'category': ['overall', 'total_interactions', 'total_skips'],
-    'skip_rate': [
-        wyr_entry['skipped'].mean(),
-        len(wyr_entry),
-        wyr_entry['skipped'].sum()
-    ],
-    'analysis_type': ['summary'] * 3
+    'overall_skip_rate': [wyr_entry['skipped'].mean()],
+    'total_interactions': [len(wyr_entry)],
+    'total_skips': [wyr_entry['skipped'].sum()]
 })
 
-combined_data = pd.concat([combined_data, summary_stats], ignore_index=True)
+summary_stats.to_csv('./skips/summary_stats.csv', index=False)
 
-# Export combined data to a single CSV file
-combined_data.to_csv('combined_skip_analysis.csv', index=False)
+print("CSV files have been created:")
+print("1. hourly_skip_rate.csv")
+print("2. daily_skip_rate.csv")
+print("3. weekend_skip_rate.csv")
+print("4. time_bin_skip_rate.csv")
+print("5. time_to_next_distribution.csv")
+print("6. summary_stats.csv")
 
-print("Combined CSV file has been created: combined_skip_analysis.csv")
-
-# Print some insights
+# Optional: Print some insights
 print("\nSome key insights:")
-print(f"Overall skip rate: {summary_stats.loc[summary_stats['category'] == 'overall', 'skip_rate'].values[0]:.2%}")
-print(f"Total interactions: {summary_stats.loc[summary_stats['category'] == 'total_interactions', 'skip_rate'].values[0]:.0f}")
-print(f"Total skips: {summary_stats.loc[summary_stats['category'] == 'total_skips', 'skip_rate'].values[0]:.0f}")
-print(f"Hour with highest skip rate: {hourly_skip_rate.loc[hourly_skip_rate['skip_rate'].idxmax(), 'category']} ({hourly_skip_rate['skip_rate'].max():.2%})")
-print(f"Hour with lowest skip rate: {hourly_skip_rate.loc[hourly_skip_rate['skip_rate'].idxmin(), 'category']} ({hourly_skip_rate['skip_rate'].min():.2%})")
-
-# Check if time_to_next_distribution is not empty before accessing its max value
-if not time_to_next_distribution.empty:
-    print(f"Most common time to next action after a skip: {time_to_next_distribution.loc[time_to_next_distribution['skip_rate'].idxmax(), 'category']} ({time_to_next_distribution['skip_rate'].max():.2%})")
-else:
-    print("No data available for time to next action after a skip.")
+print(f"Overall skip rate: {summary_stats['overall_skip_rate'].values[0]:.2%}")
+print(f"Total interactions: {summary_stats['total_interactions'].values[0]:.0f}")
+print(f"Total skips: {summary_stats['total_skips'].values[0]:.0f}")
+print(f"Hour with highest skip rate: {hourly_skip_rate.loc[hourly_skip_rate['skip_rate'].idxmax(), 'hour']} ({hourly_skip_rate['skip_rate'].max() / 100:.2%})")
+print(f"Hour with lowest skip rate: {hourly_skip_rate.loc[hourly_skip_rate['skip_rate'].idxmin(), 'hour']} ({hourly_skip_rate['skip_rate'].min() / 100:.2%})")
